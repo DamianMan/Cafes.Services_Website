@@ -1,0 +1,86 @@
+{% include "header.html" %}
+
+
+{% for cafe in cafes: %}
+{% if cafe[0] == id: %}
+
+<nav class="navbar navbar-light">
+      <div class="container-fluid">
+          <div class="col-12 d-flex justify-content-center">
+        <a class="navbar-brand">
+          <h1>{{ cafe[1] }}</h1>
+        </a>
+              </div>
+      </div>
+    </nav>
+<header id="place-photo">
+        <img class="image" src="{{ cafe[3] }}" style="min-width:100%; height:40vh; object-fit:cover;">
+
+
+
+</header>
+<section class="infos">
+    <div class="col-12 d-flex justify-content-center pt-4 pb-4"><h3 class="title-info">Services Available</h3></div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>📶 WiFi</th>
+            {% if cafe[7] == 1 or cafe[7]== '✅':%}
+            <td> ✅</td>
+            {% else: %}
+            <td> ❌</td>
+            {% endif %}
+
+        </tr>
+        <tr>
+            <th>🔌 Power Sockets</th>
+            {% if cafe[5] == 1 or cafe[5] == '✅':%}
+            <td> ✅</td>
+            {% else: %}
+            <td> ❌</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>🧻 Restroom</th>
+            {% if cafe[6] == 1 or cafe[6] == '✅':%}
+            <td> ✅</td>
+            {% else: %}
+            <td> ❌</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>🖥️📞 Video/Audio Calls</th>
+            {% if cafe[8] == 1 or cafe[8] == '✅':%}
+            <td> ✅</td>
+            {% else: %}
+            <td> ❌</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>🪑 Seats Posts</th>
+            <td>{{ cafe[9] }}</td>
+
+        </tr>
+        <tr>
+            <th>💷 Coffee Price</th>
+            <td>{{ cafe[10] }}</td>
+
+        </tr>
+        <tr>
+            <th>Get Position</th>
+            <td>📍<a href="{{cafe[2]}}">{{cafe[2]}}</a></td>
+
+        </tr>
+    </table>
+
+
+
+
+</section>
+
+<div class="col-12 d-flex justify-content-center pt-5"><a href="{{url_for('delete', id=cafe[0]) }}" type="button" class="btn btn-danger">Delete Cafe</a></div>
+{% endif %}
+{% endfor %}
+</body>
+
+</html>

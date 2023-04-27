@@ -1,0 +1,36 @@
+{% include "header.html" %}
+<section id="header">
+
+    <table class="table table-hover table-borderless align-middle">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+
+                <th scope="col">Cafe Name</th>
+                <th scope="col">Location</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for cafe in cafes: %}
+
+            <tr>
+                <th scope="row">
+
+                    <td><a href="{{ url_for('show_cafe', id=cafe[0]) }}">{{ cafe[1] }}</a></td>
+                    <td><a href="{{ url_for('show_cafe', id=cafe[0]) }}">{{ cafe[4] }}</a></td>
+                </th>
+            </tr>
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+</section>
+<div class="col-12 d-flex justify-content-center">
+<a type="button" href="{{url_for('add_cafe')}}" class="btn btn-warning text-white">Add Cafe</a>
+</div>
+</body>
+</html>

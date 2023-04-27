@@ -1,0 +1,92 @@
+
+body{
+background-image: url('https://wallpaperaccess.com/full/374003.jpg');
+
+background-size: cover;
+background-repeat:   no-repeat;
+min-height: 100vh;
+
+font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+a.navbar-brand {
+font-family: 'Montserrat Alternates', sans-serif;
+color: #FF7B54;
+font-size: 50px;
+font-weight: 900;
+
+}
+h1 {
+font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#header {
+margin-top: 7%;
+}
+
+.table {
+padding-top: 15%;
+
+}
+td {
+font-family: 'Montserrat Alternates', sans-serif;
+
+color:white;}
+.text-logo {
+padding: 5% 15%
+}
+thead th {
+font-size: 40px;
+font-weight: 900;
+text-decoration: underline;
+font-family: 'Montserrat Alternates', sans-serif;
+
+color:#F49D1A;
+}
+ a:link {
+      text-decoration: none;
+      color:white;
+}
+
+a:visited {
+      text-decoration: none;
+      color:white;
+}
+
+a:hover {
+      text-decoration: none;
+}
+
+a:active {
+      text-decoration: none;
+}
+
+.image {
+width: 100%;
+
+}
+
+.infos, td, h1, h3{
+font-family: 'Montserrat Alternates', sans-serif;
+
+}
+.add-cafe {
+background-color: #F2921D;
+color: white;
+}
+.add-cafe:hover {
+background-color: #F2921D}
+
+.title {
+padding:5%;
+}
+
+
+.add-cafe-title{
+color:#DC3535;
+text-align: center;
+
+}
+.form-cont {
+padding-left: 30%;}

@@ -1,0 +1,15 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<h1 class="add-cafe-title">Add New Cafe</h1>
+
+<div class="container-fluid d-flex justify-content-left ms-5 mt-5 pt-5 ps-5">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-left text-warning">
+            <form method="post">
+            {{ wtf.quick_form(form, button_map={'submit': 'warning'}, novalidate=True) }}
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
